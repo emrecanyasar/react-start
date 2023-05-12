@@ -1,29 +1,29 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { useEffect } from "react";
+import "./tailwind.css"
+import Button from "./components/Button/button"
 
 function App() {
 
-  useEffect(()=>{
-    if(process.env.NODE_ENV === "production"){
-      //analitik bilgilendir
-    }
-  })
-
+  const todos =['todo1','todo2','todo3']
   return (
-    <div className="App">
-      <h3>{process.env.NODE_ENV}</h3>
-      <p>
-        {process.env.REACT_APP_API_URL}
-      </p>
-      test2
-      {process.env.NODE_ENV === "production" && (
-        <>
-          <img src="/logo192.png" alt="" />
-          <img src={logo} alt="" />
-        </>
-      )}
-    </div>
+  //  <main id="main" className="test">
+  //    <h1 style={{color:'red'}} onClick={()=>alert('naber')}>merhaba</h1>
+  //    <label htmlFor="search">Arama</label>
+  //    <input type="text" id="search"></input>
+  //    <ul>
+  //     {todos.map((todo,index)=>(
+  //       <li key={index}>
+  //       {todo}
+  //     </li>
+  //     ))}
+      
+  //    </ul>
+  //  </main>
+  <div style={{padding:20}}>
+  <Button  text="asdasd" />
+  <Button  text="asdasd" variant="success"/>
+  <Button  text="asdasd" variant="danger"/>
+  <Button  text="asdasd" variant="warning"/>
+  </div>
   );
 }
 
